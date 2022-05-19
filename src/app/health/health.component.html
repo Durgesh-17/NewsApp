@@ -1,0 +1,20 @@
+<div [class.container-fluid]="selectedmode=='dark'">
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck1" (click)="changemode()">Dark mode</label>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3" *ngFor="let new of healtharray">
+                <div class="content">
+                    <img src="{{new.urlToImage}}" width="100%">
+                    <h4>{{new.title}}</h4>
+                    <p>{{new.content}}</p>
+                    <a href="{{new.url}}" class="btn btn-primary" target="_blank">Read more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
